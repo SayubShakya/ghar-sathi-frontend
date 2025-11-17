@@ -1,0 +1,46 @@
+name: loginappv2
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  google_fonts: ^6.3.2
+  get: ^4.7.2
+  liquid_swipe: ^3.1.0
+  smooth_page_indicator: ^1.2.1
+  curved_navigation_bar: ^1.0.6
+
+
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+
+  uses-material-design: true
+
+
+  assets:
+    - assets/images/blob.png
+    - assets/images/homeGif.png
+    - assets/images/GharSathiLogo.png
+    - assets/images/on_boarding_images/
+    - assets/logo/
+    - assets/images/forgotPassword.png
+
+
