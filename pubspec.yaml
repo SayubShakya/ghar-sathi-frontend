@@ -35,6 +35,8 @@ dependencies:
   #for longitude_and_latitude_calculation
   geocoding: ^4.0.0
 
+  get: ^4.7.2
+
 
 
 

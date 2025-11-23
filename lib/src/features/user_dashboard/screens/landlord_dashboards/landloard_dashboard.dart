@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:loginappv2/src/features/user_credentials/screens/role_screen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_add_room_screen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_statment_screen.dart';
+import 'package:loginappv2/src/features/user_dashboard/screens/main_dashboard_screen.dart';
 
 // Import necessary screen widgets (assuming these exist in your project)
 // For simplicity, I'm using StatelessWidget placeholders here:
@@ -53,7 +55,7 @@ class _LandloardDashboardState extends State<LandloardDashboard> {
     PaymentStatementScreen(),    // Index 0: Payment working
     LandlordTenantsScreen(),     // Index 1: Tenants
     LandlordPropertiesScreen(),  // Index 2: Properties (Center/Initial)
-    AddListingScreen(),         // Index 3: Add New Listing working
+    RoleListScreen(),  // Index 3: Add New Listing working
     LandlordSettingsScreen(),    // Index 4: Settings
   ];
 
