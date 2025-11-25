@@ -17,7 +17,7 @@ class RoleApiException implements Exception {
 /// related to RoleModel, abstracting the API details.
 class RoleRepository {
   // Use 10.0.2.2 for Android emulator connectivity
-  static const String _baseUrl = 'http://localhost:5000/api/roles';
+  static const String _baseUrl = 'http://192.168.1.75:5000/api/roles';
   final http.Client _client;
 
   // IMPORTANT: Replace this with actual token retrieval logic later!

@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          // making it scrollable
+          // making it scrollabale
           child: Container(
             padding: const EdgeInsets.all(30.0),
             child: Column(

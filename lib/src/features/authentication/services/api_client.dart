@@ -1,4 +1,4 @@
-// dart
+// api_client.dart
 import 'package:dio/dio.dart';
 import 'package:loginappv2/src/features/authentication/services/token_manager.dart';
 
@@ -11,14 +11,13 @@ class ApiClient {
   factory ApiClient() => _instance;
 
   late final Dio dio;
+  bool _isRefreshing = false;
 
   void _init() {
     final baseOptions = BaseOptions(
-      // Ensure this is correct for your environment (localhost works on web/emulator,
-      // but may need the host device IP for physical devices)
-      baseUrl: 'http://localhost:5000/api',
-      connectTimeout: const Duration(seconds: 15),
-      receiveTimeout: const Duration(seconds: 15),
+      baseUrl: 'http://192.168.1.75:5000/api',
+      connectTimeout: const Duration(seconds: 30),
+      receiveTimeout: const Duration(seconds: 30),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -31,57 +30,86 @@ class ApiClient {
       InterceptorsWrapper(
         onRequest: (options, handler) async {
           try {
-            // 1. Fetch the token asynchronously
-            final token = await TokenManager().getAccessToken();
-
-            // ignore: avoid_print
-            print('Interceptor fetched token: ${token != null ? "[REDACTED]" : "null"}');
-
-            // 2. Set the Authorization header if a token exists
-            if (token != null && token.isNotEmpty) {
-              // Standard header name is 'Authorization' (case-sensitive)
-              options.headers['Authorization'] = 'Bearer $token';
-
-              // ⚠️ REFINEMENT: Remove the redundant fallback header.
-              // Most modern servers respect the standard capitalization.
-              // If the standard header is set, we ensure the fallback is removed
-              // or simply rely on the capitalized one.
-              // options.headers.remove('authorization');
-            } else {
-              // Ensure no Authorization header is present if token is null
-              options.headers.remove('Authorization');
-              options.headers.remove('authorization');
+            // Skip adding token for login endpoint
+            if (options.path.contains('/auth/token')) {
+              return handler.next(options);
             }
 
-            // ignore: avoid_print
-            print('Request -> ${options.method} ${options.uri} headers: ${options.headers}');
+            final token = await TokenManager().getAccessToken();
+            print('Interceptor fetched token: ${token != null ? "[REDACTED]" : "null"}');
+
+            if (token != null && token.isNotEmpty) {
+              options.headers['Authorization'] = 'Bearer $token';
+            } else {
+              options.headers.remove('Authorization');
+            }
+
+            print('Request -> ${options.method} ${options.uri}');
           } catch (e) {
-            // ignore: avoid_print
             print('Error retrieving token in interceptor: $e');
           }
           return handler.next(options);
         },
         onResponse: (response, handler) {
-          // ignore: avoid_print
           print('Response <- ${response.statusCode} ${response.requestOptions.path}');
           return handler.next(response);
         },
         onError: (DioException err, handler) async {
           if (err.response?.statusCode == 401) {
-            // ignore: avoid_print
-            print('Received 401 from ${err.requestOptions.path}. Clearing token.');
+            print('Received 401 from ${err.requestOptions.path}');
 
-            // ⚠️ BEST PRACTICE: Clear token on 401 (Unauthorized) response
-            // This is crucial for security and forcing a re-login.
-            await TokenManager().clearAccessToken();
+            // Don't try to refresh token for auth endpoints
+            if (err.requestOptions.path.contains('/auth/')) {
+              await TokenManager().clearAccessToken();
+              return handler.next(err);
+            }
 
-            // Optional: You could use Get.offAll to navigate back to the login screen here
-            // Get.offAllNamed(Routes.LOGIN);
+            // Try to refresh token
+            if (!_isRefreshing) {
+              _isRefreshing = true;
+              try {
+                // Implement your token refresh logic here
+                // final newToken = await _refreshToken();
+                // if (newToken != null) {
+                //   await TokenManager().saveAccessToken(newToken);
+                //   // Retry the original request
+                //   final response = await dio.request(
+                //     err.requestOptions.path,
+                //     data: err.requestOptions.data,
+                //     queryParameters: err.requestOptions.queryParameters,
+                //     options: Options(
+                //       method: err.requestOptions.method,
+                //       headers: {'Authorization': 'Bearer $newToken'},
+                //     ),
+                //   );
+                //   return handler.resolve(response);
+                // }
+              } catch (refreshError) {
+                print('Token refresh failed: $refreshError');
+                await TokenManager().clearAccessToken();
+                // Navigate to login screen
+                // Get.offAllNamed(Routes.LOGIN);
+              } finally {
+                _isRefreshing = false;
+              }
+            }
           }
-          // The error type is DioException now, not DioError
           return handler.next(err);
         },
       ),
     );
+  }
+
+  // Add this method for token refresh
+  Future<String?> _refreshToken() async {
+    try {
+      // Implement your token refresh logic
+      // final response = await dio.post('/auth/refresh');
+      // return response.data['token'];
+      return null;
+    } catch (e) {
+      print('Token refresh error: $e');
+      return null;
+    }
   }
 }

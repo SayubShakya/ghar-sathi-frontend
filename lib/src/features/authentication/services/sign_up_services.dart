@@ -15,7 +15,7 @@ class SignUpApiException implements Exception {
 class SignUpRepository {
   // Use http://10.0.2.2 for Android Emulator, or your local IP for physical devices.
   // IMPORTANT: Replace this with your actual Node.js API registration endpoint.
-  static const String _registrationUrl = 'http://localhost:5000/api/auth/register';
+  static const String _registrationUrl = 'http://192.168.1.75:5000/api/auth/register';
 
   final http.Client _client;
 

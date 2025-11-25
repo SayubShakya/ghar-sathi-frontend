@@ -6,7 +6,7 @@ import 'dart:convert';
 import 'package:path/path.dart';
 
 class ImageService {
-  static const String _uploadUrl = 'http://localhost:5000/api/images/upload-image';
+  static const String _uploadUrl = 'http://192.168.1.75:5000/api/images/upload-image';
 
   Future<String?> uploadImage(File imageFile) async {
     try {
