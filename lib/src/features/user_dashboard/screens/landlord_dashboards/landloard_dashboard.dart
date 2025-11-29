@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:loginappv2/src/features/user_credentials/screens/role_screen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_add_room_screen.dart';
+import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_home_screen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_statment_screen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/main_dashboard_screen.dart';
 
@@ -46,13 +47,13 @@ class LandloardDashboard extends StatefulWidget {
 class _LandloardDashboardState extends State<LandloardDashboard> {
   // Key to control the navigation bar programmatically (optional)
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
- 
+
   // State variable to track the currently selected page index
   int _page = 2; // Start on the 3rd index (e.g., Properties List)
 
   // List of screens corresponding to the navigation bar items
   final List<Widget> _pages = [
-    PaymentStatementScreen(),    // Index 0: Payment working
+    LandlordDashboardScreen(),    // Index 0: Payment working
     LandlordTenantsScreen(),     // Index 1: Tenants
     LandlordPropertiesScreen(),  // Index 2: Properties (Center/Initial)
     AddListingScreen(),  // Index 3: Add New Listing working

@@ -3,15 +3,35 @@ import 'package:get/get.dart';
 import 'package:loginappv2/src/features/authentication/controllers/login_controller.dart';
 
 
-class LoginForm extends StatelessWidget {
-  LoginForm({super.key});
+class LoginForm extends StatefulWidget {
+  const LoginForm({Key? key}) : super(key: key);
 
-  final LoginController _controller = Get.put(LoginController());
+  @override
+  _LoginFormState createState() => _LoginFormState();
+}
 
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+class _LoginFormState extends State<LoginForm> {
+  late final LoginController _controller;
+
+  late final TextEditingController emailController;
+  late final TextEditingController passwordController;
 
   final RxBool _obscurePassword = true.obs;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = Get.put(LoginController());
+    emailController = TextEditingController();
+    passwordController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +40,7 @@ class LoginForm extends StatelessWidget {
         children: [
           TextFormField(
             controller: emailController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: "E-Mail",
               prefixIcon: Icon(Icons.person_2_outlined),
             ),
@@ -31,7 +51,7 @@ class LoginForm extends StatelessWidget {
             obscureText: _obscurePassword.value,
             decoration: InputDecoration(
               labelText: "Password",
-              prefixIcon: Icon(Icons.password_outlined),
+              prefixIcon: const Icon(Icons.password_outlined),
               suffixIcon: IconButton(
                 icon: Icon(
                   _obscurePassword.value

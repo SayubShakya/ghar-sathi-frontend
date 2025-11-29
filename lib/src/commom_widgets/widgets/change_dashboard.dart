@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landloard_dashboard.dart'; // Import GetX
+import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landloard_dashboard.dart';
+// Note: You must ensure this import path is correct for your project structure
+// For this example, I'll comment it out to allow the code to compile stand-alone.
+// import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landloard_dashboard.dart';
 
-
+// --- Room Listing Widget (Replaces Switch to Landlord Button) ---
 class RoomListingWidget extends StatelessWidget {
   const RoomListingWidget({super.key});
 
   // A function to handle the tap event and navigate
   void _onTapHandler() {
-    // Navigate to the DestinationScreen using GetX routing
+    print('ROOM खाली छ? List Now! tapped.');
+
     Get.off(() => LandloardDashboard());
-    // Alternative for named routes: Get.toNamed('/newListing');
   }
 
   @override
@@ -19,7 +22,7 @@ class RoomListingWidget extends StatelessWidget {
     return GestureDetector(
       onTap: _onTapHandler,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0), // Reduced vertical padding
         child: Container(
           padding: const EdgeInsets.all(16.0),
           decoration: BoxDecoration(
@@ -31,7 +34,7 @@ class RoomListingWidget extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.2),
                 spreadRadius: 2,
                 blurRadius: 5,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
@@ -48,7 +51,7 @@ class RoomListingWidget extends StatelessWidget {
                     Text.rich(
                       TextSpan(
                         children: [
-                          TextSpan(
+                          const TextSpan(
                             text: 'ROOM खाली छ?',
                             style: TextStyle(
                               fontSize: 18,
@@ -101,7 +104,7 @@ class RoomListingWidget extends StatelessWidget {
                         shape: BoxShape.circle,
                         border: Border.all(color: Colors.white, width: 2), // White border for separation
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.add,
                         color: Colors.white,
                         size: 20,
@@ -117,26 +120,3 @@ class RoomListingWidget extends StatelessWidget {
     );
   }
 }
-
-// Example usage in main.dart (Requires GetMaterialApp)
-/*
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // You MUST use GetMaterialApp for GetX routing to work
-    return GetMaterialApp(
-      title: 'Room Sewa App',
-      home: Scaffold(
-        appBar: AppBar(title: Text('Home Screen')),
-        body: Center(
-          child: RoomListingWidget(),
-        ),
-      ),
-    );
-  }
-}
-*/

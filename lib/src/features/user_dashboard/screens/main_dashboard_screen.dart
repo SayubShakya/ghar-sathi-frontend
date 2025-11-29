@@ -7,6 +7,7 @@ import 'package:loginappv2/src/features/properties/screens/property_list_screen.
 import 'package:loginappv2/src/features/user_dashboard/screens/addexpensescreen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/map/map_screen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/home_screen.dart';
+import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/profile_screen.dart';
 
 class UserDashboard extends StatefulWidget {
   const UserDashboard({super.key});
@@ -24,8 +25,9 @@ class _UserDashboardState extends State<UserDashboard> {
     const Mapspage(), // Index 0
     const EsewaApp(title: 'esewa Aayush'), // Index 1
     PropertyListScreen(), // Index 2
-    HomeScreen(), // Index 3
+    // Index 3
     const RoomListingWidget(), // Index 4
+    MyAccountScreen(),
   ];
 
   @override

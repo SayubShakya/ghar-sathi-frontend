@@ -17,7 +17,7 @@ class RoleApiException implements Exception {
 /// related to RoleModel, abstracting the API details.
 class RoleRepository {
   // Use 10.0.2.2 for Android emulator connectivity
-  static const String _baseUrl = 'http://192.168.1.75:5000/api/roles';
+  static const String _baseUrl = 'http://192.168.1.138:5000/api/roles';
   final http.Client _client;
 
   // IMPORTANT: Replace this with actual token retrieval logic later!
@@ -51,13 +51,13 @@ class RoleRepository {
           throw RoleApiException(decodedBody['error'] as String, statusCode: response.statusCode);
         }
         // --- END NEW CHECK ---
-print('Decoded Body: $decodedBody');
+        print('Decoded Body: $decodedBody');
 
         // If the body is a List, proceed with successful decoding.
         // if (decodedBody is List) {
-          final res=PaginatedRolesResponse.fromJson(decodedBody);
-          print(res);
-          return res.data;
+        final res=PaginatedRolesResponse.fromJson(decodedBody);
+        print(res);
+        return res.data;
 
         // } else {
         //   // If it's a 200 OK but the body isn't an expected List or error Map, something is structurally wrong.
@@ -118,7 +118,7 @@ print('Decoded Body: $decodedBody');
 
 
       if (response.statusCode == 201) {
-        
+
         if (decodedBody is Map<String, dynamic>) {
           return RoleModel.fromJson(decodedBody);
         } else {

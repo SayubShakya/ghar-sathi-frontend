@@ -9,7 +9,7 @@ import 'package:loginappv2/src/features/authentication/services/token_manager.da
 
 class ImageService {
   // Use the IP address, replacing 'localhost'
-  static const String _serverBaseUrl = 'http://192.168.1.75:5000';
+  static const String _serverBaseUrl = 'http://192.168.1.138:5000';
 
   // Endpoint for POST (Uploading the image)
   static const String _uploadUrl = '$_serverBaseUrl/api/images/upload-image';
