@@ -13,14 +13,14 @@ class SplashScreenController extends GetxController
 
   Future startAnimation()async {
     // 1. Wait a moment before starting the fade-in animation
-    await Future.delayed(const Duration(milliseconds: 300));
+    await Future.delayed(const Duration(milliseconds: 5000));
 
     // 2. Start the fade-in animation
     animate.value = true;
 
     // 3. Wait for the animation to complete plus viewing time (e.g., 3000ms total)
     // The delay should match the total time you want the splash screen displayed.
-    await Future.delayed(const Duration(milliseconds: 3000));
+    await Future.delayed(const Duration(milliseconds: 5000));
 
     // 4. Navigate to the next screen (e.g., OnBoarding or Welcome)
     // Using Get.off() or Get.offAll() is usually better for splash screens

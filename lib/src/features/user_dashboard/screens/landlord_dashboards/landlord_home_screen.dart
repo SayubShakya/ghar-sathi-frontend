@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_add_room_screen.dart';
 
 // --- Data Model for Property Listing ---
 class Property {
@@ -22,12 +23,14 @@ class LandlordDashboardController extends GetxController {
   final RxList<Property> properties = <Property>[
     Property(title: '1 hall', type: 'Residential', status: 'AVAILABLE', rent: 'Rs.19,000'),
     Property(title: 'Double room', type: 'Commercial', status: 'AVAILABLE', rent: 'Rs.15,000'),
-    Property(title: 'Warehouse', type: 'Industrial', status: 'BOOKED', rent: 'Rs.40,000'),
+    Property(title: 'Large Warehouse', type: 'Industrial', status: 'BOOKED', rent: 'Rs.40,000'),
+    Property(title: 'Office Suite', type: 'Commercial', status: 'AVAILABLE', rent: 'Rs.80,000'),
+    Property(title: 'Single Flat', type: 'Residential', status: 'BOOKED', rent: 'Rs.10,000'),
   ].obs;
 
   void onAddPropertyTapped() {
     print('Add New Property tapped.');
-    // Implement navigation to add new property screen
+    Get.to(AddListingScreen());
   }
 
   void onUpdatePropertyTapped() {
@@ -65,6 +68,13 @@ class LandlordDashboardScreen extends StatelessWidget {
   static const Color borderColor = Color(0xFFE5E7EB);
   static const Color accentPurple = Color(0xFF8B5CF6);
 
+  // Define Fixed Column Widths for horizontal scrolling
+  static const double titleColumnWidth = 180;
+  static const double typeColumnWidth = 120;
+  static const double statusColumnWidth = 150;
+  static const double rentColumnWidth = 100;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,9 +87,9 @@ class LandlordDashboardScreen extends StatelessWidget {
           children: [
             _buildWelcomeCard(),
             const SizedBox(height: 24),
-            _buildHeaderSection(), // Updated header section
+            _buildHeaderSection(),
             const SizedBox(height: 20),
-            _buildPropertyTable(),
+            _buildPropertyTable(), // This now contains the horizontal scroll view
             const SizedBox(height: 30),
             _buildActionButtons(),
           ],
@@ -131,7 +141,7 @@ class LandlordDashboardScreen extends StatelessWidget {
               shape: BoxShape.circle,
               border: Border.all(color: Colors.white54, width: 2),
             ),
-            child: CircleAvatar(
+            child: const CircleAvatar(
               radius: 20,
               backgroundColor: Colors.white,
               child: Icon(Icons.person, size: 22, color: darkPurple),
@@ -147,7 +157,7 @@ class LandlordDashboardScreen extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [darkPurple, accentPurple],
@@ -167,7 +177,7 @@ class LandlordDashboardScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Welcome Back!',
                   style: TextStyle(
                     color: Colors.white,
@@ -176,26 +186,30 @@ class LandlordDashboardScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 8),
-                Text(
-                  'You have ${controller.properties.length} properties listed',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 14,
+                Obx(
+                      () => Text(
+                    'You have ${controller.properties.length} properties listed',
+                    style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 14,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 12),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Text(
-                    '${controller.properties.where((p) => p.status == 'AVAILABLE').length} Available',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w500,
+                Obx(
+                      () => Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Text(
+                      '${controller.properties.where((p) => p.status == 'AVAILABLE').length} Available',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),
@@ -208,7 +222,7 @@ class LandlordDashboardScreen extends StatelessWidget {
               color: Colors.white.withOpacity(0.1),
               shape: BoxShape.circle,
             ),
-            child: Icon(Icons.emoji_objects_outlined,
+            child: const Icon(Icons.emoji_objects_outlined,
                 color: Colors.white, size: 32),
           ),
         ],
@@ -221,7 +235,7 @@ class LandlordDashboardScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Column(
+        const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -232,7 +246,7 @@ class LandlordDashboardScreen extends StatelessWidget {
                 color: textPrimary,
               ),
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Text(
               'Manage all your rental spaces',
               style: TextStyle(
@@ -277,15 +291,19 @@ class LandlordDashboardScreen extends StatelessWidget {
         border: Border.all(color: borderColor, width: 1),
       ),
       child: Obx(
-            () => Column(
-          children: [
-            // Table Header
-            _buildTableHeader(),
-            // Table Rows - UPDATED to remove image references
-            ...controller.properties.map((property) {
-              return _buildPropertyRow(property);
-            }).toList(),
-          ],
+            () => SingleChildScrollView( // WRAPPER FOR HORIZONTAL SCROLLING
+          scrollDirection: Axis.horizontal,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Table Header
+              _buildTableHeader(),
+              // Table Rows
+              ...controller.properties.map((property) {
+                return _buildPropertyRow(property);
+              }).toList(),
+            ],
+          ),
         ),
       ),
     );
@@ -304,8 +322,9 @@ class LandlordDashboardScreen extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(
-            flex: 2,
+          // Column 1: PROPERTY (Fixed Width)
+          SizedBox(
+            width: titleColumnWidth,
             child: Text(
               'PROPERTY',
               style: TextStyle(
@@ -314,10 +333,13 @@ class LandlordDashboardScreen extends StatelessWidget {
                 fontSize: 12,
                 letterSpacing: 0.5,
               ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
-          Expanded(
-            flex: 2,
+          // Column 2: TYPE (Fixed Width)
+          SizedBox(
+            width: typeColumnWidth,
             child: Text(
               'TYPE',
               style: TextStyle(
@@ -328,8 +350,9 @@ class LandlordDashboardScreen extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            flex: 2,
+          // Column 3: STATUS (Fixed Width)
+          SizedBox(
+            width: statusColumnWidth,
             child: Text(
               'STATUS',
               style: TextStyle(
@@ -340,8 +363,9 @@ class LandlordDashboardScreen extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            flex: 2,
+          // Column 4: RENT (Fixed Width)
+          SizedBox(
+            width: rentColumnWidth,
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
@@ -360,7 +384,7 @@ class LandlordDashboardScreen extends StatelessWidget {
     );
   }
 
-  // UPDATED Property Row - Simplified without images
+  // UPDATED Property Row - Using Fixed Widths
   Widget _buildPropertyRow(Property property) {
     final bool isAvailable = property.status == 'AVAILABLE';
 
@@ -373,9 +397,9 @@ class LandlordDashboardScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         child: Row(
           children: [
-            // Property Title - UPDATED without image
-            Expanded(
-              flex: 2,
+            // Property Title
+            SizedBox(
+              width: titleColumnWidth,
               child: Text(
                 property.title,
                 style: TextStyle(
@@ -383,26 +407,30 @@ class LandlordDashboardScreen extends StatelessWidget {
                   color: textPrimary,
                   fontSize: 14,
                 ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
 
             // Type
-            Expanded(
-              flex: 2,
+            SizedBox(
+              width: typeColumnWidth,
               child: Text(
                 property.type,
                 style: TextStyle(
                   color: textSecondary,
                   fontSize: 14,
                 ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
 
             // Status
-            Expanded(
-              flex: 2,
+            SizedBox(
+              width: statusColumnWidth,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
                   color: isAvailable
                       ? availableGreen.withOpacity(0.1)
@@ -439,8 +467,8 @@ class LandlordDashboardScreen extends StatelessWidget {
             ),
 
             // Rent
-            Expanded(
-              flex: 2,
+            SizedBox(
+              width: rentColumnWidth,
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Column(
@@ -453,6 +481,7 @@ class LandlordDashboardScreen extends StatelessWidget {
                         color: textPrimary,
                         fontSize: 14,
                       ),
+                      maxLines: 1,
                     ),
                     Text(
                       'per month',

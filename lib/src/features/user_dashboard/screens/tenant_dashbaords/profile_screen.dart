@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/EditProfilePage.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/aboutus_screen.dart';
 import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/privacy_setting_screen.dart';
 
@@ -10,7 +11,8 @@ class MyAccountController extends GetxController {
   // Functions for handling tap events
   void onEditProfileTapped() {
     print('Edit Profile Tapped');
-    // Implement navigation or logic here
+
+    Get.to(() => EditProfilePage());
   }
 
   void onViewMyHistoryTapped() {

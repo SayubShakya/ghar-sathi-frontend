@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
         child: Obx(
               () => AnimatedOpacity(
             // Animation duration is set on the opacity
-            duration: const Duration(milliseconds: 1500),
+            duration: const Duration(milliseconds: 5000),
             opacity: splashController.animate.value ? 1 : 0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

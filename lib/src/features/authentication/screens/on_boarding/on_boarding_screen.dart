@@ -36,7 +36,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           subTitle: OnBoardingSubTitle1,
           counterText: OnBoardingCounter1,
           height: size.height,
-          bgColor: OnBoardingPage1Color,
+          bgColor: Colors.black38,
         ),
 
       ),
@@ -47,7 +47,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           subTitle: OnBoardingSubTitle2,
           counterText: OnBoardingCounter2,
           height: size.height,
-          bgColor: OnBoardingPage2Color,
+          bgColor: Colors.black38,
         ),
 
       ),
@@ -58,7 +58,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           subTitle: OnBoardingSubTitle3,
           counterText: OnBoardingCounter3,
           height: size.height,
-          bgColor: OnBoardingPage1Color,
+          bgColor: Colors.black38,
         ),
 
       ),

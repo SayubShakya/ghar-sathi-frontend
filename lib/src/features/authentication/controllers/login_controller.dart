@@ -36,7 +36,7 @@ class LoginController extends GetxController {
       );
 
       // 3. Navigate based on role
-      if (loginResponse.role == "LANDLORD") {
+      if (loginResponse.role == "LANDLORD" || loginResponse.roleId == "691d847c4ae798894a863e97") {
         Get.offAll(() => LandloardDashboard());
       } else {
         Get.offAll(() => UserDashboard());
