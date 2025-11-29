@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:loginappv2/src/commom_widgets/chat_page/chat_detail_page.dart';
+import 'package:loginappv2/src/commom_widgets/chat_page/chat_list_page.dart';
 import 'package:loginappv2/src/commom_widgets/widgets/change_dashboard.dart';
 import 'package:loginappv2/src/features/payment/esewa_pay.dart';
 import 'package:loginappv2/src/features/properties/screens/dashboard.dart';
@@ -25,9 +27,10 @@ class _UserDashboardState extends State<UserDashboard> {
     const Mapspage(), // Index 0
     const EsewaApp(title: 'esewa Aayush'), // Index 1
     PropertyListScreen(), // Index 2
-    // Index 3
-    const RoomListingWidget(), // Index 4
+    //const RoomListingWidget(),
+    ChatListPage(),
     MyAccountScreen(),
+
   ];
 
   @override

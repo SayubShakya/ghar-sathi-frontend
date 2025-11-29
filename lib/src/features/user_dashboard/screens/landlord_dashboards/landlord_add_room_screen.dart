@@ -377,14 +377,40 @@ class AddListingScreen extends StatelessWidget {
                 // -------------------------------
                 // SUBMIT BUTTON
                 // -------------------------------
+                // SizedBox(
+                //   width: double.infinity,
+                //   child: ElevatedButton(
+                //     onPressed: () {
+                //       if (_formKey.currentState!.validate()) {
+                //         controller.addProperty();
+                //       }
+                //     },
+                //     style: ElevatedButton.styleFrom(
+                //       backgroundColor: Colors.green,
+                //       padding: const EdgeInsets.symmetric(vertical: 15),
+                //       shape: RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.circular(8),
+                //       ),
+                //     ),
+                //     child: controller.isLoading.value
+                //         ? const SizedBox(
+                //       height: 20,
+                //       width: 20,
+                //       child: CircularProgressIndicator(
+                //         strokeWidth: 2,
+                //         valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                //       ),
+                //     )
+                //         : const Text(
+                //       "LIST PROPERTY NOW",
+                //       style: TextStyle(fontSize: 18, color: Colors.white),
+                //     ),
+                //   ),
+                // ),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        controller.addProperty();
-                      }
-                    },
+                    onPressed: null, // This automatically disables the button
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
                       padding: const EdgeInsets.symmetric(vertical: 15),
@@ -392,21 +418,12 @@ class AddListingScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: controller.isLoading.value
-                        ? const SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                      ),
-                    )
-                        : const Text(
+                    child: const Text(
                       "LIST PROPERTY NOW",
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
-                ),
+                )
               ],
             ),
           ),
