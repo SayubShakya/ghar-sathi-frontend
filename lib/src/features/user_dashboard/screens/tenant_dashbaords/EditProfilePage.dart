@@ -35,39 +35,67 @@ class _EditProfilePageState extends State<EditProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF2C0B4D),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF2C0B4D),
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
         ),
+        centerTitle: true,
         title: const Text(
           'Edit Profile',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
-        centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            // Profile Picture Section
-            _buildProfilePictureSection(),
-            const SizedBox(height: 40),
-            
-            // Form Fields
-            _buildFormSection(),
-            const SizedBox(height: 40),
-            
-            // Update Button
-            _buildUpdateButton(),
-          ],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF2C0B4D),
+              Color(0xFF2C0B4D),
+            ],
+          ),
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              const SizedBox(height: 12),
+              // Profile Picture Section
+              _buildProfilePictureSection(),
+              const SizedBox(height: 28),
+
+              // Form Fields
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(24),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.05),
+                      blurRadius: 18,
+                      offset: const Offset(0, 10),
+                    ),
+                  ],
+                ),
+                child: _buildFormSection(),
+              ),
+              const SizedBox(height: 28),
+
+              // Update Button
+              _buildUpdateButton(),
+            ],
+          ),
         ),
       ),
     );
@@ -85,16 +113,27 @@ class _EditProfilePageState extends State<EditProfilePage> {
               height: 120,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.grey[300],
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF2C0B4D), Color(0xFF2C0B4D)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.15),
+                    blurRadius: 16,
+                    offset: const Offset(0, 6),
+                  ),
+                ],
                 border: Border.all(
-                  color: Colors.grey[400]!,
-                  width: 2,
+                  color: Colors.white,
+                  width: 3,
                 ),
               ),
               child: const Icon(
                 Icons.person,
                 size: 60,
-                color: Colors.grey,
+                color: Colors.white,
               ),
             ),
             // Change Picture Button
@@ -126,7 +165,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           child: const Text(
             'Change Picture',
             style: TextStyle(
-              color: Color(0xFF4285F4),
+              color: Color(0xFFB3A4FF),
               fontSize: 16,
               fontWeight: FontWeight.w500,
             ),

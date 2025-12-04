@@ -12,8 +12,17 @@ class RoomListingWidget extends StatelessWidget {
   // A function to handle the tap event and navigate
   void _onTapHandler() {
     print('ROOM खाली छ? List Now! tapped.');
-
-    Get.off(() => LandloardDashboard());
+    Get.defaultDialog(
+      title: 'Confirm',
+      middleText: 'Do you want to become a landlord?',
+      textConfirm: 'Yes',
+      textCancel: 'No',
+      confirmTextColor: Colors.white,
+      onConfirm: () {
+        Get.off(() => LandloardDashboard());
+      },
+      onCancel: () {},
+    );
   }
 
   @override

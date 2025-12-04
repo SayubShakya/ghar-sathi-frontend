@@ -25,7 +25,7 @@ class _UserDashboardState extends State<UserDashboard> {
   // The CORRECTED pages list (5 items for 5 icons)
   final List<Widget> _pages = [
     const Mapspage(), // Index 0
-    const EsewaApp(title: 'esewa Aayush'), // Index 1
+    const EsewaApp(title: 'esewa'), // Index 1
     PropertyListScreen(), // Index 2
     //const RoomListingWidget(),
     ChatListPage(),

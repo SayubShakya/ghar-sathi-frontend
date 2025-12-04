@@ -33,7 +33,17 @@ class MyAccountController extends GetxController {
 
   void onLogoutTapped() {
     print('Logout Tapped');
-    Get.to(() => LoginScreen());
+    Get.defaultDialog(
+      title: 'Logout',
+      middleText: 'Do you want to logout',
+      textConfirm: 'Yes',
+      textCancel: 'No',
+      confirmTextColor: Colors.white,
+      onConfirm: () {
+        Get.offAll(() => LoginScreen());
+      },
+      onCancel: () {},
+    );
     // ** Implement your actual logout logic here **
     // e.g., clearing user session, navigating to login screen (Get.offAll(() => LoginScreen()))
   }
