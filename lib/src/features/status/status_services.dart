@@ -6,7 +6,7 @@ class StatusRepository {
   final Dio _dio = Dio();
   final storage = GetStorage();
 
-  static const String _baseUrl = "http://192.168.1.214:5000/api/statuses";
+  static const String _baseUrl = "http://10.10.8.103:5000/api/statuses";
   // For physical device use your LAN IP
 
   StatusRepository() {
