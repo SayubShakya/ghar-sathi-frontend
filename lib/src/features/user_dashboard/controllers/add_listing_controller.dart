@@ -186,7 +186,7 @@ class AddListingController extends GetxController {
           final filename = await _imageService.uploadImage(coverImage.value!);
 
           if (filename != null && filename.isNotEmpty) {
-            imageUrl = 'http://10.10.10.203:5000/uploads/$filename';
+            imageUrl = 'http://10.10.9.216:5000/uploads/$filename';
             print('✅ Image uploaded successfully: $imageUrl');
           } else {
             Get.snackbar('Error', 'Failed to upload image - no filename returned',

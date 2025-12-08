@@ -35,21 +35,29 @@ class _UserDashboardState extends State<UserDashboard> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    const Color darkPurple = Color(0xFF2C0B4D);
+
+    final Color navColor = isDarkMode ? darkPurple : Colors.white;
+    final Color buttonColor = isDarkMode ? darkPurple : Colors.white;
+    final Color navBackgroundColor = isDarkMode ? Colors.transparent : Colors.white10;
+    final Color iconColor = isDarkMode ? Colors.white : Colors.black;
+
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
         index: _page,
         // Your 5 icons
-        items: const <Widget>[
-          Icon(Icons.maps_home_work_outlined, size: 30),
-          Icon(Icons.payments, size: 30),
-          Icon(Icons.room_outlined, size: 30),
-          Icon(Icons.message_outlined, size: 30),
-          Icon(Icons.person_2_outlined, size: 30),
+        items: <Widget>[
+          Icon(Icons.maps_home_work_outlined, size: 30, color: iconColor),
+          Icon(Icons.payments, size: 30, color: iconColor),
+          Icon(Icons.room_outlined, size: 30, color: iconColor),
+          Icon(Icons.message_outlined, size: 30, color: iconColor),
+          Icon(Icons.person_2_outlined, size: 30, color: iconColor),
         ],
-        color: Colors.white,
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.white10,
+        color: navColor,
+        buttonBackgroundColor: buttonColor,
+        backgroundColor: navBackgroundColor,
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(milliseconds: 600),
         onTap: (index) {

@@ -7,6 +7,12 @@ import '../../../../commom_widgets/widgets/change_dashboard.dart';
 class PrivacySettingsController extends GetxController {
   RxBool isDarkModeEnabled = false.obs; // Observable for dark mode switch
 
+  @override
+  void onInit() {
+    super.onInit();
+    isDarkModeEnabled.value = Get.isDarkMode;
+  }
+
   void onBackTapped() {
     print('Back button tapped on Privacy & Settings.');
     Get.back(); // Navigate back
@@ -20,7 +26,7 @@ class PrivacySettingsController extends GetxController {
   void onToggleDarkMode(bool value) {
     isDarkModeEnabled.value = value;
     print('Dark mode toggled to: ${isDarkModeEnabled.value}');
-    // Implement logic to change app theme here
+    Get.changeThemeMode(isDarkModeEnabled.value ? ThemeMode.dark : ThemeMode.light);
   }
 }
 

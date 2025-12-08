@@ -66,23 +66,31 @@ class _LandloardDashboardState extends State<LandloardDashboard> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    const Color darkPurple = Color(0xFF2C0B4D);
+
+    final Color navColor = isDarkMode ? darkPurple : Colors.white;
+    final Color buttonColor = isDarkMode ? darkPurple : Colors.white;
+    final Color navBackgroundColor = isDarkMode ? Colors.transparent : Colors.blueAccent;
+    final Color iconColor = isDarkMode ? Colors.white : Colors.black;
+
     return Scaffold(
       // --- Curved Navigation Bar Implementation ---
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
         index: _page, // Set the current index
-        items: const <Widget>[
-          Icon(Icons.payment, size: 30),        // Payments
-          Icon(Icons.chat_bubble_outline, size: 30), // Tenants
-          Icon(Icons.house_siding, size: 30),   // Properties
-          Icon(Icons.add_home_work_outlined, size: 30), // Add Listing
-          Icon(Icons.settings, size: 30),       // Settings
+        items: <Widget>[
+          Icon(Icons.payment, size: 30, color: iconColor),        // Payments
+          Icon(Icons.chat_bubble_outline, size: 30, color: iconColor), // Tenants
+          Icon(Icons.house_siding, size: 30, color: iconColor),   // Properties
+          Icon(Icons.add_home_work_outlined, size: 30, color: iconColor), // Add Listing
+          Icon(Icons.settings, size: 30, color: iconColor),       // Settings
         ],
 
         // Styling properties
-        color: Colors.white,
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.blueAccent, // Color of the area behind the curve
+        color: navColor,
+        buttonBackgroundColor: buttonColor,
+        backgroundColor: navBackgroundColor, // Color of the area behind the curve
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(milliseconds: 600),
 
@@ -97,7 +105,8 @@ class _LandloardDashboardState extends State<LandloardDashboard> {
 
       // --- Body Content ---
       body: Container(
-        color: Colors.blueAccent, // Background color matching the nav bar
+        color: isDarkMode ? Colors.transparent : Colors.blueAccent, // Background color matching the nav bar in light mode
+
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -5,8 +5,8 @@ import '../../properties/models/model_property.dart';
 import '../models/model_property.dart';
 
 class PropertyService {
-  final String _baseUrl = "http://10.10.8.103:5000/api/properties";
-  final String _uploadImageUrl = "http://10.10.8.103:5000/api/images/upload-image";
+  final String _baseUrl = "http://10.10.9.216:5000/api/properties";
+  final String _uploadImageUrl = "http://10.10.9.216:5000/api/images/upload-image";
 
   final TokenManager _tokenManager = TokenManager();
 
@@ -100,7 +100,7 @@ class PropertyService {
 
       final headers = await _getHeaders();
       final response = await http.get(
-        Uri.parse("http://10.10.8.103:5000/api/property-types?page=$page&limit=$limit"),
+        Uri.parse("http://10.10.9.216:5000/api/property-types?page=$page&limit=$limit"),
         headers: headers,
       );
 
@@ -130,7 +130,7 @@ class PropertyService {
 
       final headers = await _getHeaders();
       final response = await http.get(
-        Uri.parse("http://10.10.8.103:5000/api/statuses?page=$page&limit=$limit"),
+        Uri.parse("http://10.10.9.216:5000/api/statuses?page=$page&limit=$limit"),
         headers: headers,
       );
 

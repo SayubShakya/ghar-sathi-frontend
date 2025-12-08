@@ -6,7 +6,7 @@ import 'package:loginappv2/src/features/user_dashboard/models/location/model_loc
 
 
 class LocationService {
-  static const String _baseUrl = 'http://10.10.8.103:5000/api/locations?page=1&limit=5';
+  static const String _baseUrl = 'http://10.10.9.216:5000/api/locations?page=1&limit=5';
   final http.Client _client;
 
   LocationService({http.Client? client}) : _client = client ?? http.Client();

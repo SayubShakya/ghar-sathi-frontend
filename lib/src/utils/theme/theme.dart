@@ -13,7 +13,7 @@ class AppTheme{
   );
 
   static ThemeData darkTheme = ThemeData(
-      brightness: Brightness.light,
+      brightness: Brightness.dark,
       textTheme: TTextTheme.DarkTextTheme,
       inputDecorationTheme: TextformFieldTheme.darkInputDecorationTheme
   );
