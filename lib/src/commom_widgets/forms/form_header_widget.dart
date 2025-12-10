@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:loginappv2/src/constants/image_strings.dart';
-import 'package:loginappv2/src/constants/text_strings.dart';
+import 'package:ghar_sathi/src/constants/image_strings.dart';
+import 'package:ghar_sathi/src/constants/text_strings.dart';
 class FormHeaderWidget extends StatelessWidget {
   const FormHeaderWidget({
     super.key,

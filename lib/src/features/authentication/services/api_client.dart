@@ -1,6 +1,6 @@
 // api_client.dart
 import 'package:dio/dio.dart';
-import 'package:loginappv2/src/features/authentication/services/token_manager.dart';
+import 'package:ghar_sathi/src/features/authentication/services/token_manager.dart';
 
 class ApiClient {
   ApiClient._internal() {
@@ -16,7 +16,7 @@ class ApiClient {
   void _init() {
     final baseOptions = BaseOptions(
 
-      baseUrl: 'http://10.10.10.253:5000/api',
+      baseUrl: 'http://10.10.8.98:5000/api',
       connectTimeout: const Duration(seconds: 30),
       receiveTimeout: const Duration(seconds: 30),
       headers: {

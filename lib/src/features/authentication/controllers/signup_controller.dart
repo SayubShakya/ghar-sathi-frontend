@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/services/sign_up_services.dart';
+import 'package:ghar_sathi/src/features/authentication/services/sign_up_services.dart';
 
 class SignUpController extends GetxController {
     static SignUpController get instance => Get.find();

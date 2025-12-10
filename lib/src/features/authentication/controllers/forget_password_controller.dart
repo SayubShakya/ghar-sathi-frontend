@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // Note: You must add the 'get' package to your pubspec.yaml
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/screens/otp_code/verification_code_screen.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/otp_code/verification_code_screen.dart';
 
 
 class ForgetPasswordController extends GetxController {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/profile_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/profile_screen.dart';
 
 // --- GetX Controller (Logic) ---
 class AboutUsController extends GetxController {

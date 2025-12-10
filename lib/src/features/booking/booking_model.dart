@@ -1,7 +1,7 @@
 // lib/src/features/booking/models/booking_list_model.dart
-import 'package:loginappv2/src/features/authentication/models/user_model.dart';
-import 'package:loginappv2/src/features/status/status_model.dart';
-import 'package:loginappv2/src/features/user_dashboard/services/property_service.dart';
+import 'package:ghar_sathi/src/features/authentication/models/user_model.dart';
+import 'package:ghar_sathi/src/features/status/status_model.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/services/property_service.dart';
 
 // Simplified property model for booking response
 class BookingPropertyModel {

@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:loginappv2/src/features/authentication/services/token_manager.dart';
+import 'package:ghar_sathi/src/features/authentication/services/token_manager.dart';
 import '../../properties/models/model_property.dart';
 import '../models/model_property.dart';
 
 class PropertyService {
-  final String _baseUrl = "http://10.10.10.253:5000/api/properties";
-  final String _uploadImageUrl = "http://10.10.10.253:5000/api/images/upload-image";
+  final String _baseUrl = "http://10.10.8.98:5000/api/properties";
+  final String _uploadImageUrl = "http://10.10.8.98:5000/api/images/upload-image";
 
   final TokenManager _tokenManager = TokenManager();
 
@@ -100,7 +100,7 @@ class PropertyService {
 
       final headers = await _getHeaders();
       final response = await http.get(
-        Uri.parse("http://10.10.10.253:5000/api/property-types?page=$page&limit=$limit"),
+        Uri.parse("http://10.10.8.98:5000/api/property-types?page=$page&limit=$limit"),
         headers: headers,
       );
 
@@ -130,7 +130,7 @@ class PropertyService {
 
       final headers = await _getHeaders();
       final response = await http.get(
-        Uri.parse("http://10.10.10.253:5000/api/statuses?page=$page&limit=$limit"),
+        Uri.parse("http://10.10.8.98:5000/api/statuses?page=$page&limit=$limit"),
         headers: headers,
       );
 

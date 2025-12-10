@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/booking/booking_list_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/EditProfilePage.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/aboutus_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/privacy_setting_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/view_my_history.dart' show ViewMyHistoryScreen;
+import 'package:ghar_sathi/src/features/booking/booking_list_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/EditProfilePage.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/aboutus_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/privacy_setting_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/view_my_history.dart' show ViewMyHistoryScreen;
 
 import '../../../authentication/screens/login/login_screen.dart';
 
@@ -125,7 +125,7 @@ class MyAccountScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'Sayub Shakya',
+                    'Daniel Shakya',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,

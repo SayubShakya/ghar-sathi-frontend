@@ -4,17 +4,17 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:geocoding/geocoding.dart';
 
-import 'package:loginappv2/src/features/image_handle/image_handle_services.dart';
-import 'package:loginappv2/src/features/user_dashboard/models/location/model_location.dart';
+import 'package:ghar_sathi/src/features/image_handle/image_handle_services.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/models/location/model_location.dart';
 
 // Import the PropertyService that has createProperty() and uploadImage()
-import 'package:loginappv2/src/features/user_dashboard/services/property_service.dart' hide PropertyTypeModel;
+import 'package:ghar_sathi/src/features/user_dashboard/services/property_service.dart' hide PropertyTypeModel;
 
 // Import separate services for other features
-import 'package:loginappv2/src/features/property_type/property_type_model.dart';
-import 'package:loginappv2/src/features/authentication/models/user_model.dart';
-import 'package:loginappv2/src/features/image_handle/image_handle_model.dart';
-import 'package:loginappv2/src/features/user_dashboard/controllers/landlord_dashboard_controller.dart';
+import 'package:ghar_sathi/src/features/property_type/property_type_model.dart';
+import 'package:ghar_sathi/src/features/authentication/models/user_model.dart';
+import 'package:ghar_sathi/src/features/image_handle/image_handle_model.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/controllers/landlord_dashboard_controller.dart';
 
 import '../../properties/models/model_property.dart';
 
@@ -215,7 +215,7 @@ class AddListingController extends GetxController {
                 : null;
 
             if (imageFilename != null && imageFilename!.isNotEmpty) {
-              imageUrl = 'http://10.10.10.253:5000/uploads/$imageFilename';
+              imageUrl = 'http://10.10.8.98:5000/uploads/$imageFilename';
               print('✅ Image uploaded successfully: $imageUrl (id: $imageId)');
             } else {
               Get.snackbar(

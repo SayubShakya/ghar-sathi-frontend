@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:loginappv2/src/features/authentication/models/login_response_model.dart';
-import 'package:loginappv2/src/features/authentication/services/api_client.dart';
+import 'package:ghar_sathi/src/features/authentication/models/login_response_model.dart';
+import 'package:ghar_sathi/src/features/authentication/services/api_client.dart';
 
 
 class AuthService {

@@ -1,7 +1,7 @@
 // lib/src/features/booking/services/booking_service.dart
 import 'package:dio/dio.dart';
-import 'package:loginappv2/src/features/authentication/services/api_client.dart';
-import 'package:loginappv2/src/features/booking/booking_property_model.dart';
+import 'package:ghar_sathi/src/features/authentication/services/api_client.dart';
+import 'package:ghar_sathi/src/features/booking/booking_property_model.dart';
 
 class BookingService {
   final Dio _dio = ApiClient().dio;

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:loginappv2/src/commom_widgets/chat_page/chat_list_page.dart';
-import 'package:loginappv2/src/features/user_credentials/screens/role_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_add_room_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_home_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_statment_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/main_dashboard_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/profile_screen.dart';
+import 'package:ghar_sathi/src/commom_widgets/chat_page/chat_list_page.dart';
+import 'package:ghar_sathi/src/features/user_credentials/screens/role_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/landlord_dashboards/landlord_add_room_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/landlord_dashboards/landlord_home_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/landlord_dashboards/landlord_statment_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/main_dashboard_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/profile_screen.dart';
 
 // Import necessary screen widgets (assuming these exist in your project)
 // For simplicity, I'm using StatelessWidget placeholders here:

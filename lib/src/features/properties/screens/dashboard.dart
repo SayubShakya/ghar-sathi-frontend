@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:loginappv2/src/features/properties/screens/detailpagegrid.dart';
+import 'package:ghar_sathi/src/features/properties/screens/detailpagegrid.dart';
 
 // Retained for navigation
 // import 'package:demopcps/model/newsapi.dart'; // Removed as API model is not needed

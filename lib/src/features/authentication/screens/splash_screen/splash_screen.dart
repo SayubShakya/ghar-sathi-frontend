@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/constants/image_strings.dart';
-import 'package:loginappv2/src/constants/text_strings.dart';
-import 'package:loginappv2/src/constants/sizes.dart';
-import 'package:loginappv2/src/features/authentication/controllers/splash_screen_controller.dart';
+import 'package:ghar_sathi/src/constants/image_strings.dart';
+import 'package:ghar_sathi/src/constants/text_strings.dart';
+import 'package:ghar_sathi/src/constants/sizes.dart';
+import 'package:ghar_sathi/src/features/authentication/controllers/splash_screen_controller.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key); // Added const

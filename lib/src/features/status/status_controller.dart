@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/status/status_model.dart';
-import 'package:loginappv2/src/features/status/status_services.dart';
+import 'package:ghar_sathi/src/features/status/status_model.dart';
+import 'package:ghar_sathi/src/features/status/status_services.dart';
 
 
 class StatusController extends GetxController {

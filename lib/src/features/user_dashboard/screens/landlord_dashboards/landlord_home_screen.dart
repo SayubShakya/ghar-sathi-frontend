@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landlord_add_room_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/landlord_dashboards/landlord_add_room_screen.dart';
 
 // Import the controller (make sure the path is correct)
 import '../../../properties/models/model_property.dart';

@@ -5,11 +5,11 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:path/path.dart';
 import 'dart:typed_data';
-import 'package:loginappv2/src/features/authentication/services/token_manager.dart';
+import 'package:ghar_sathi/src/features/authentication/services/token_manager.dart';
 
 class ImageService {
   // Use the IP address, replacing 'localhost'
-  static const String _serverBaseUrl = 'http://10.10.10.253:5000';
+  static const String _serverBaseUrl = 'http://10.10.8.98:5000';
 
   // Endpoint for POST (Uploading the image)
   static const String _uploadUrl = '$_serverBaseUrl/api/images/upload-image';

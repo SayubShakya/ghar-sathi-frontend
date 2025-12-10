@@ -1,6 +1,6 @@
-import 'package:loginappv2/src/features/authentication/models/user_model.dart';
-import 'package:loginappv2/src/features/booking/booking_model.dart';
-import 'package:loginappv2/src/features/user_dashboard/services/property_service.dart';
+import 'package:ghar_sathi/src/features/authentication/models/user_model.dart';
+import 'package:ghar_sathi/src/features/booking/booking_model.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/services/property_service.dart';
 
 
 class BookingListModel {

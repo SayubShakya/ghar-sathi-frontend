@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle, Uint8List;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/properties/screens/horizontal_property_list_widget.dart';
-import 'package:loginappv2/src/features/properties/screens/property_list_screen.dart';
-import 'package:loginappv2/src/features/properties/controllers/property_controller.dart';
+import 'package:ghar_sathi/src/features/properties/screens/horizontal_property_list_widget.dart';
+import 'package:ghar_sathi/src/features/properties/screens/property_list_screen.dart';
+import 'package:ghar_sathi/src/features/properties/controllers/property_controller.dart';
 
 class Mapspage extends StatefulWidget {
   const Mapspage({super.key});

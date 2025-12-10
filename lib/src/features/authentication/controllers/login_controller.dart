@@ -1,10 +1,10 @@
 // login_controller.dart
 
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/services/auth_service.dart';
-import 'package:loginappv2/src/features/authentication/services/token_manager.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/main_dashboard_screen.dart';
-import 'package:loginappv2/src/utils/custom_snakbar.dart';
+import 'package:ghar_sathi/src/features/authentication/services/auth_service.dart';
+import 'package:ghar_sathi/src/features/authentication/services/token_manager.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/main_dashboard_screen.dart';
+import 'package:ghar_sathi/src/utils/custom_snakbar.dart';
 
 
 import '../../../utils/full_screen_dailog_loader.dart';

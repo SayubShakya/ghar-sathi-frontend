@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:loginappv2/src/features/user_credentials/models/roles_model.dart';
-import 'package:loginappv2/src/features/user_credentials/services/role_services.dart'; // Ensure RoleApiException is imported
+import 'package:ghar_sathi/src/features/user_credentials/models/roles_model.dart';
+import 'package:ghar_sathi/src/features/user_credentials/services/role_services.dart'; // Ensure RoleApiException is imported
 
 /// Custom exception for handling API-related errors.
 class RoleApiException implements Exception {
@@ -17,7 +17,7 @@ class RoleApiException implements Exception {
 /// related to RoleModel, abstracting the API details.
 class RoleRepository {
   // Use 10.0.2.2 for Android emulator connectivity
-  static const String _baseUrl = 'http://10.10.10.253:5000/api/roles';
+  static const String _baseUrl = 'http://10.10.8.98:5000/api/roles';
   final http.Client _client;
 
   // IMPORTANT: Replace this with actual token retrieval logic later!

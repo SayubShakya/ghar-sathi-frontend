@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:loginappv2/src/constants/colors.dart';
-import 'package:loginappv2/src/constants/image_strings.dart';
-import 'package:loginappv2/src/constants/text_strings.dart';
+import 'package:ghar_sathi/src/constants/colors.dart';
+import 'package:ghar_sathi/src/constants/image_strings.dart';
+import 'package:ghar_sathi/src/constants/text_strings.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/screens/login/login_screen.dart';
-import 'package:loginappv2/src/features/authentication/screens/signup/signup_screen.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/login/login_screen.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/signup/signup_screen.dart';
 
 
 class WelcomeScreen extends StatelessWidget {

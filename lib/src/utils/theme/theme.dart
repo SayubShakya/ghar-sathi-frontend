@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:loginappv2/src/utils/theme/widget_themes/text_field_theme.dart';
-import 'package:loginappv2/src/utils/theme/widget_themes/text_theme.dart';
+import 'package:ghar_sathi/src/utils/theme/widget_themes/text_field_theme.dart';
+import 'package:ghar_sathi/src/utils/theme/widget_themes/text_theme.dart';
 
 class AppTheme{
 

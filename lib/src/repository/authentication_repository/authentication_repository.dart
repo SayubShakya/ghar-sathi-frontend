@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/screens/welcome/welcome_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/main_dashboard_screen.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/welcome/welcome_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/main_dashboard_screen.dart';
 
 
 class AuthenticationRepository extends GetxController {

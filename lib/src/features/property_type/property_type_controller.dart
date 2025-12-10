@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/property_type/property_type_model.dart';
-import 'package:loginappv2/src/features/property_type/property_type_services.dart';
+import 'package:ghar_sathi/src/features/property_type/property_type_model.dart';
+import 'package:ghar_sathi/src/features/property_type/property_type_services.dart';
 
 
 class PropertyTypeController extends GetxController {

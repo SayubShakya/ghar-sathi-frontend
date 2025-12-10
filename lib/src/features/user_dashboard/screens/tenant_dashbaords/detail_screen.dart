@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/properties/controllers/property_controller.dart';
+import 'package:ghar_sathi/src/features/properties/controllers/property_controller.dart';
 
 import 'dart:typed_data';
 
-import 'package:loginappv2/src/features/properties/models/model_property.dart';
+import 'package:ghar_sathi/src/features/properties/models/model_property.dart';
 
 class PropertyDetailScreen extends StatelessWidget {
   final String propertyId;

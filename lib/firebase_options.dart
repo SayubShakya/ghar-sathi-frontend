@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '329333032806',
     projectId: 'ghar-sathi',
     storageBucket: 'ghar-sathi.firebasestorage.app',
-    iosBundleId: 'com.example.loginappv2',
+    iosBundleId: 'com.example.ghar_sathi',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '329333032806',
     projectId: 'ghar-sathi',
     storageBucket: 'ghar-sathi.firebasestorage.app',
-    iosBundleId: 'com.example.loginappv2',
+    iosBundleId: 'com.example.ghar_sathi',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(

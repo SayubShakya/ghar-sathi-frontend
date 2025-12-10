@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:loginappv2/src/features/authentication/services/api_client.dart';
+import 'package:ghar_sathi/src/features/authentication/services/api_client.dart';
 
 import '../models/model_property.dart';
 

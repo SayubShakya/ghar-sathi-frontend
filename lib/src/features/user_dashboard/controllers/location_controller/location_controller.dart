@@ -1,8 +1,8 @@
 // lib/src/features/location/location_controller.dart
 
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/user_dashboard/models/location/model_location.dart';
-import 'package:loginappv2/src/features/user_dashboard/services/location_service.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/models/location/model_location.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/services/location_service.dart';
 
 
 class LocationController extends GetxController {

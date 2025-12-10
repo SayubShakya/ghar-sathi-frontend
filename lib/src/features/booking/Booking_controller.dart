@@ -1,7 +1,7 @@
 // lib/src/features/booking/controllers/booking_controller.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/booking/booking_service.dart';
+import 'package:ghar_sathi/src/features/booking/booking_service.dart';
 
 import 'booking_property_model.dart';
 

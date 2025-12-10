@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:loginappv2/src/features/property_type/property_type_model.dart';
+import 'package:ghar_sathi/src/features/property_type/property_type_model.dart';
 
 
 class PropertyTypeService {
   final Dio _dio = Dio();
   final storage = GetStorage();
 
-  final String baseUrl = "http://10.10.10.253:5000/api";
+  final String baseUrl = "http://10.10.8.98:5000/api";
 
   Future<List<PropertyTypeModel>> getPropertyTypes() async {
     try {

@@ -1,4 +1,4 @@
-package com.example.loginappv2
+package com.example.ghar_sathi
 
 import io.flutter.embedding.android.FlutterActivity
 

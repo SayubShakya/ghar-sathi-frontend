@@ -1,10 +1,10 @@
 // lib/src/features/property/models/model_property.dart
 
-import 'package:loginappv2/src/features/authentication/models/user_model.dart';
-import 'package:loginappv2/src/features/image_handle/image_handle_model.dart';
-import 'package:loginappv2/src/features/property_type/property_type_model.dart';
-import 'package:loginappv2/src/features/status/status_model.dart';
-import 'package:loginappv2/src/features/user_dashboard/services/property_service.dart' hide PropertyTypeModel, LocationModel;
+import 'package:ghar_sathi/src/features/authentication/models/user_model.dart';
+import 'package:ghar_sathi/src/features/image_handle/image_handle_model.dart';
+import 'package:ghar_sathi/src/features/property_type/property_type_model.dart';
+import 'package:ghar_sathi/src/features/status/status_model.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/services/property_service.dart' hide PropertyTypeModel, LocationModel;
 import '../../user_dashboard/models/location/model_location.dart';
 import 'dart:typed_data'; // Required for Uint8List
 

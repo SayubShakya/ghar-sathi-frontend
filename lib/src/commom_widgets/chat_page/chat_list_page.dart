@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loginappv2/src/commom_widgets/chat_page/chat_detail_page.dart';
+import 'package:ghar_sathi/src/commom_widgets/chat_page/chat_detail_page.dart';
 
 // Chat Model
 class Chat {

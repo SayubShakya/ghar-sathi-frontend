@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:loginappv2/src/commom_widgets/chat_page/chat_detail_page.dart';
-import 'package:loginappv2/src/commom_widgets/chat_page/chat_list_page.dart';
-import 'package:loginappv2/src/commom_widgets/widgets/change_dashboard.dart';
-import 'package:loginappv2/src/features/payment/esewa_pay.dart';
-import 'package:loginappv2/src/features/properties/screens/dashboard.dart';
-import 'package:loginappv2/src/features/properties/screens/property_list_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/addexpensescreen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/map/map_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/home_screen.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/profile_screen.dart';
+import 'package:ghar_sathi/src/commom_widgets/chat_page/chat_detail_page.dart';
+import 'package:ghar_sathi/src/commom_widgets/chat_page/chat_list_page.dart';
+import 'package:ghar_sathi/src/commom_widgets/widgets/change_dashboard.dart';
+import 'package:ghar_sathi/src/features/payment/esewa_pay.dart';
+import 'package:ghar_sathi/src/features/properties/screens/dashboard.dart';
+import 'package:ghar_sathi/src/features/properties/screens/property_list_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/addexpensescreen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/map/map_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/home_screen.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/profile_screen.dart';
 
 class UserDashboard extends StatefulWidget {
   const UserDashboard({super.key});

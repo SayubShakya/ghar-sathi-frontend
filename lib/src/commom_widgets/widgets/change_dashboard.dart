@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landloard_dashboard.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/landlord_dashboards/landloard_dashboard.dart';
 // Note: You must ensure this import path is correct for your project structure
 // For this example, I'll comment it out to allow the code to compile stand-alone.
-// import 'package:loginappv2/src/features/user_dashboard/screens/landlord_dashboards/landloard_dashboard.dart';
+// import 'package:ghar_sathi/src/features/user_dashboard/screens/landlord_dashboards/landloard_dashboard.dart';
 
 // --- Room Listing Widget (Replaces Switch to Landlord Button) ---
 class RoomListingWidget extends StatelessWidget {

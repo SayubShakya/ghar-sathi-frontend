@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:loginappv2/src/features/user_credentials/controllers/role_controller.dart';
-import 'package:loginappv2/src/features/user_credentials/services/role_services.dart'; // Import with alias for fully qualified type
+import 'package:ghar_sathi/src/features/user_credentials/controllers/role_controller.dart';
+import 'package:ghar_sathi/src/features/user_credentials/services/role_services.dart'; // Import with alias for fully qualified type
 
 // IMPORTANT: Update these imports based on the exact paths in your project structure:
 

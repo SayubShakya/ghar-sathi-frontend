@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/controllers/login_controller.dart';
+import 'package:ghar_sathi/src/features/authentication/controllers/login_controller.dart';
 
 
 class LoginForm extends StatefulWidget {

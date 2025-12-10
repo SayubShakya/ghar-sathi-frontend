@@ -1,6 +1,6 @@
 // dart
 import 'package:get_storage/get_storage.dart';
-import 'package:loginappv2/src/utils/get_storage_key.dart';
+import 'package:ghar_sathi/src/utils/get_storage_key.dart';
 
 // token_manager.dart
 class TokenManager {

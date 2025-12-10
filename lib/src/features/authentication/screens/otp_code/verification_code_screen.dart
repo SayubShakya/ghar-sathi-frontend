@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // Needed for input formatters
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/controllers/verification_code_controller.dart';
+import 'package:ghar_sathi/src/features/authentication/controllers/verification_code_controller.dart';
 
 
 class VerificationCodeScreen extends StatelessWidget {

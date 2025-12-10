@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/services/token_manager.dart';
-import 'package:loginappv2/src/features/booking/booking_service.dart';
-import 'package:loginappv2/src/features/booking/booking_list_screen.dart';
+import 'package:ghar_sathi/src/features/authentication/services/token_manager.dart';
+import 'package:ghar_sathi/src/features/booking/booking_service.dart';
+import 'package:ghar_sathi/src/features/booking/booking_list_screen.dart';
 
-import 'package:loginappv2/src/features/image_handle/image_handle_services.dart';
-import 'package:loginappv2/src/features/user_dashboard/screens/tenant_dashbaords/detail_screen.dart';
+import 'package:ghar_sathi/src/features/image_handle/image_handle_services.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/screens/tenant_dashbaords/detail_screen.dart';
 import '../Repositories/property_repo.dart';
 import '../models/model_property.dart';
 

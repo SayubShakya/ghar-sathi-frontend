@@ -2,11 +2,11 @@
 
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:loginappv2/src/features/user_dashboard/models/location/model_location.dart';
+import 'package:ghar_sathi/src/features/user_dashboard/models/location/model_location.dart';
 
 
 class LocationService {
-  static const String _baseUrl = 'http://10.10.10.253:5000/api/locations?page=1&limit=5';
+  static const String _baseUrl = 'http://10.10.8.98:5000/api/locations?page=1&limit=5';
   final http.Client _client;
 
   LocationService({http.Client? client}) : _client = client ?? http.Client();

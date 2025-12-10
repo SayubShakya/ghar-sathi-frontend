@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 // Constants & Widgets
-import 'package:loginappv2/src/constants/image_strings.dart';
-import 'package:loginappv2/src/constants/text_strings.dart';
-import 'package:loginappv2/src/commom_widgets/forms/form_header_widget.dart';
-import 'package:loginappv2/src/features/authentication/screens/login/login_screen.dart';
+import 'package:ghar_sathi/src/constants/image_strings.dart';
+import 'package:ghar_sathi/src/constants/text_strings.dart';
+import 'package:ghar_sathi/src/commom_widgets/forms/form_header_widget.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/login/login_screen.dart';
 
 // Controllers & Models
-import 'package:loginappv2/src/features/authentication/controllers/signup_controller.dart';
-import 'package:loginappv2/src/features/authentication/services/sign_up_services.dart';
-import 'package:loginappv2/src/features/user_credentials/controllers/role_controller.dart';
-import 'package:loginappv2/src/features/user_credentials/models/roles_model.dart';
-import 'package:loginappv2/src/features/user_credentials/services/role_services.dart';
+import 'package:ghar_sathi/src/features/authentication/controllers/signup_controller.dart';
+import 'package:ghar_sathi/src/features/authentication/services/sign_up_services.dart';
+import 'package:ghar_sathi/src/features/user_credentials/controllers/role_controller.dart';
+import 'package:ghar_sathi/src/features/user_credentials/models/roles_model.dart';
+import 'package:ghar_sathi/src/features/user_credentials/services/role_services.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

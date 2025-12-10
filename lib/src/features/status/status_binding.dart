@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/status/status_controller.dart';
+import 'package:ghar_sathi/src/features/status/status_controller.dart';
 
 class StatusBinding extends Bindings {
   @override

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/user_credentials/controllers/role_controller.dart';
+import 'package:ghar_sathi/src/features/user_credentials/controllers/role_controller.dart';
 
 
 // Import necessary files from your project structure
-import 'package:loginappv2/src/features/user_credentials/models/roles_model.dart';
+import 'package:ghar_sathi/src/features/user_credentials/models/roles_model.dart';
 // Relative path to the controller
 
 // NOTE: You must have the RoleRepository and http client setup
@@ -124,7 +124,7 @@ class RoleCard extends StatelessWidget {
 // -------------------------------------------------------------
 
 /* import 'package:http/http.dart' as http;
-import 'package:loginappv2/src/features/user_credentials/services/role_services.dart';
+import 'package:ghar_sathi/src/features/user_credentials/services/role_services.dart';
 
 class RoleListBinding extends Bindings {
   @override

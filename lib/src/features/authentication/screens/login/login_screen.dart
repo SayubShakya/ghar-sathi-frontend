@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:loginappv2/src/features/authentication/screens/login/login_footer_widget.dart';
-import 'package:loginappv2/src/features/authentication/screens/login/login_form_widget.dart';
-import 'package:loginappv2/src/features/authentication/screens/login/login_header_widget.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/login/login_footer_widget.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/login/login_form_widget.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/login/login_header_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

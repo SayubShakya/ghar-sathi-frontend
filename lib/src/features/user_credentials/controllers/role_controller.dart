@@ -1,6 +1,6 @@
 
-import 'package:loginappv2/src/features/user_credentials/models/roles_model.dart';
-import 'package:loginappv2/src/features/user_credentials/services/role_services.dart';
+import 'package:ghar_sathi/src/features/user_credentials/models/roles_model.dart';
+import 'package:ghar_sathi/src/features/user_credentials/services/role_services.dart';
 import 'package:get/get.dart';
 
 /// The state representation for the role fetching process.

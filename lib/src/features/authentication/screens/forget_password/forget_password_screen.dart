@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // Note: You must add the 'get' package to your pubspec.yaml
 import 'package:get/get.dart';
-import 'package:loginappv2/src/features/authentication/controllers/forget_password_controller.dart';
+import 'package:ghar_sathi/src/features/authentication/controllers/forget_password_controller.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({super.key});

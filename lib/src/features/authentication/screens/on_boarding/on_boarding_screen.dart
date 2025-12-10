@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
-import 'package:loginappv2/src/constants/colors.dart';
-import 'package:loginappv2/src/constants/image_strings.dart';
-import 'package:loginappv2/src/constants/sizes.dart';
-import 'package:loginappv2/src/constants/text_strings.dart';
-import 'package:loginappv2/src/features/authentication/models/model_on_boarding.dart';
-import 'package:loginappv2/src/features/authentication/screens/on_boarding/on_boarding_page_widget.dart';
+import 'package:ghar_sathi/src/constants/colors.dart';
+import 'package:ghar_sathi/src/constants/image_strings.dart';
+import 'package:ghar_sathi/src/constants/sizes.dart';
+import 'package:ghar_sathi/src/constants/text_strings.dart';
+import 'package:ghar_sathi/src/features/authentication/models/model_on_boarding.dart';
+import 'package:ghar_sathi/src/features/authentication/screens/on_boarding/on_boarding_page_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:get/get.dart'; // Import GetX for navigation
-import 'package:loginappv2/src/features/authentication/screens/welcome/welcome_screen.dart'; // Import WelcomeScreen
+import 'package:ghar_sathi/src/features/authentication/screens/welcome/welcome_screen.dart'; // Import WelcomeScreen
 
 class OnBoardingScreen extends StatefulWidget {
   OnBoardingScreen({super.key});
